@@ -2,16 +2,10 @@
 #include<cstdlib>
 #include<cmath>
 #include<ctime>
-#include<cstring>
-#include<string>
 using namespace std;
 int randomto(int n);
-void startup();
-void checkscore();
-void gameplay();
-void computer();
-void draw();
-int height[7], start=0, input, c, win, num, cf;
+void startup(), checkscore(), gameplay(), computer(), draw();
+int height[7], start, input, c, win, num, cf;
 char *g[10][10];
 string play1, play2;
 int main(){
@@ -135,6 +129,11 @@ void checkscore(){
                 } else {
                     cout << play2 << " won!" << endl;
                 }
+                return;
+            }
+            if(c==41){
+                cout << "It's a draw!" << endl;
+                win=1;
                 return;
             }
         }
